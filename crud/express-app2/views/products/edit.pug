@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+    h1 Edit Course
+    form(action="/products/edit/"+product._id,method="post")
+        .form-group
+            label(for="name") course Name
+            input#name(type="text", class="form-control", name="name",value=product.name)
+        .form-group
+            label(for="contact") course id
+            input#contact(type="text", class="form-control", name="contact",value=product.contact)
+        .form-group
+            label(for="city") course duration(HRS)
+            input#city(type="text", class="form-control", name="city",value=product.city)
+        .form-group
+            label(for="service") course fee(USD)
+            input#service(type="text", class="form-control", name="service",value=product.service)
+        input(type="submit", class="btn btn-info")
+        

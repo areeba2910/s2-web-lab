@@ -1,0 +1,29 @@
+extends ../layout
+
+block content
+    .row
+        .col-sm-8
+            h1=title
+        .col-sm-4
+            a(href="/products/add", class="btn btn-success float-right") Create new course
+    table.table
+        thead
+            tr
+                th course Name
+                th course id
+                th course duration(HRS)
+                th Course fee(USD)
+                th 
+
+        tbody
+            each product in products
+                tr  
+                    td=product.name
+                    td=product.contact
+                    td=product.city
+                    td=product.service
+                    td
+                        a(href="/products/delete/"+product._id, class="btn btn-danger") Delete
+                        a(href="/products/edit/"+product._id, class="btn btn-warning") Edit
+
+
